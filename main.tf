@@ -19,24 +19,24 @@ resource "ibm_container_cluster" "cluster" {
   hardware        = "shared"
 }
 
-resource "ibm_service_instance" "service" {
-  name       = "${var.service_instance_name}${random_id.name.hex}"
-  space_guid = data.ibm_space.space.id
-  service    = var.service_offering
-  plan       = var.plan
-  tags       = ["my-service"]
-}
+#resource "ibm_service_instance" "service" {
+ # name       = "${var.service_instance_name}${random_id.name.hex}"
+ # space_guid = data.ibm_space.space.id
+#  service    = var.service_offering
+#  plan       = var.plan
+#  tags       = ["my-service"]
+#}
 
 resource "ibm_service_key" "key" {
   name                  = var.service_key
   service_instance_guid = ibm_service_instance.service.id
 }
 
-resource "ibm_container_bind_service" "bind_service" {
-  cluster_name_id     = ibm_container_cluster.cluster.id
-  service_instance_id = ibm_service_instance.service.id
-  namespace_id        = "default"
-}
+#resource "ibm_container_bind_service" "bind_service" {
+#  cluster_name_id     = ibm_container_cluster.cluster.id
+#  service_instance_id = ibm_service_instance.service.id
+#  namespace_id        = "default"
+#}
 
 data "ibm_container_cluster_config" "cluster_config" {
   cluster_name_id = ibm_container_cluster.cluster.id
