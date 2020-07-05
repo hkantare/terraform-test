@@ -1,9 +1,9 @@
 provider "ibm" {
 } 
 
-data "ibm_account" "account" {
-  org_guid = data.ibm_org.org.id
-}
+#data "ibm_account" "account" {
+#  org_guid = data.ibm_org.org.id
+#}
 
 resource "ibm_container_cluster" "cluster" {
   name       = "${var.cluster_name}${random_id.name.hex}"
