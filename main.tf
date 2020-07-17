@@ -3,8 +3,8 @@ resource "ibm_container_cluster" "testacc_cluster" {
   datacenter      = "dal12"
   machine_type    = "b2c.4x16"
   hardware        = "shared"
-  #public_vlan_id  = "123456"
-  #private_vlan_id = "654321"
+  public_vlan_id  = "956"
+  private_vlan_id = "1378"
   #subnet_id       = ["1154643"]
   #default_pool_size      = 1
   
