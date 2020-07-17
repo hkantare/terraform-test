@@ -9,6 +9,6 @@ resource "ibm_container_cluster" "testacc_cluster" {
   #default_pool_size      = 1
   
   tags             = [
-          "TechnicalOwner : tnakajo"
+          "TagA", "TagB", "TagC"
         ]
 }
