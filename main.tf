@@ -1,6 +1,6 @@
 resource "ibm_container_cluster" "testacc_cluster" {
-  name            = "mycluster0717"
-  datacenter      = "wdc04"
+  name            = "mycluster07171326"
+  datacenter      = "dal12"
   machine_type    = "b2c.4x16"
   hardware        = "shared"
   #public_vlan_id  = "123456"
