@@ -9,10 +9,6 @@ resource "ibm_container_cluster" "testacc_cluster" {
   #default_pool_size      = 1
   
   tags             = [
-          "Shared         : No",
-          + "TechnicalOwner : tnakajo",
-          + "environment    : kp-cdo-roks-eng-02",
-          + "kaiserpermanente-provisioner : terraform",
-          + "kaiserpermanente-provisioner-cluster-name  : kp-cdo-roks-eng-02"
+          "TechnicalOwner : tnakajo"
         ]
 }
